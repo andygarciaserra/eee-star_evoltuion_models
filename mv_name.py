@@ -1,4 +1,4 @@
-#FUNCTION THAT RETURNS m,v GIVEN THE FILE NAME:
+#FUNCTIONS:
 def m_v_name(name):
     mass='0'
     v='0'
@@ -57,3 +57,8 @@ def m_v_name(name):
         mass='120'
         
     return mass,v
+
+def find_nearest(array, value):
+    array = np.asarray(array)
+    idx = (np.abs(array - value)).argmin()
+    return array[idx]
